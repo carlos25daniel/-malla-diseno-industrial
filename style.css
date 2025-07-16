@@ -1,1 +1,78 @@
+body {
+  font-family: sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#malla {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.card {
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  width: 260px;
+  background-color: #ddd;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card.locked {
+  background-color: #eee;
+  border-style: dashed;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.card.approved {
+  border: 2px solid #2ecc71;
+  background-color: #d1fbd1;
+}
+
+.card h3 {
+  margin: 0 0 5px;
+}
+
+.card input[type="text"],
+.card input[type="number"] {
+  width: calc(100% - 10px);
+  margin-top: 5px;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* Colores por tipo de materia */
+.card[data-tipo="anual-sf"] { background-color: #800080; color: white; }         /* Púrpura */
+.card[data-tipo="cuatri-sf"] { background-color: #b57edc; color: white; }       /* Malva */
+.card[data-tipo="anual-f"]  { background-color: #ffef00; color: #333; }         /* Canario */
+.card[data-tipo="cuatri-f"] { background-color: #f4c430; color: #333; }         /* Narciso */
+.card[data-tipo="optativa"] { background-color: #40e0d0; color: black; }        /* Turquesa */
+
+.card label {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+.card input:disabled {
+  background-color: #f0f0f0;
+  cursor: not-allowed;
+}
 
